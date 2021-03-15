@@ -55,6 +55,6 @@ if __name__=="__main__":
         trainer=Trainer(model, params)
         sess.run(tf.global_variables_initializer())
         # trainer.restore_last_session(sess)
-        trainer.train(sess,data_helper=train_dataHelper,eval_data_helper=valid_dataHelper,test_data_helper=test_dataHelper,iter_num=200)
+        trainer.train(sess,data_helper=train_dataHelper,eval_data_helper=valid_dataHelper,test_data_helper=test_dataHelper,iter_num=100)
         #predict
         evaluate_model(sess,trainer,test_dataHelper)
